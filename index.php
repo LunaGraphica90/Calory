@@ -8,6 +8,9 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -66,53 +69,59 @@
         </ul>
     </section>
     <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous voulez des précisions sur les prestations ? Vous souhaitez discuter de votre projet ?</p>
-        <p>N’hésitez pas à prendre contact en remplissant le formulaire ci dessous, ou bien par téléphone ou par mail (disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)</p>
-        <p>Calory</p>
-        <p>Belfort (90)</p>
-        <p>Tél. : 07 69 15 42 96</p>
-        <p>Mail : projet@calory.fr</p>
-        <form class="row" method="post" action="#">
-            <div class="col-md-6">
-                <label for="lastname" class="form-label">Nom</label>
-                <input type="text" class="form-control" id="inputlastname" name="lastname">
+        <div class="row d-flex align-items-center">
+            <div class="col-6">
+                <h2>Contact</h2>
+                <p>Vous voulez des précisions sur les prestations ? Vous souhaitez discuter de votre projet ?</p>
+                <p>N’hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail</br>(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)</p>
+                <p>Calory</p>
+                <p>Belfort (90)</p>
+                <p>Tél. : 07 69 15 42 96</p>
+                <p>Mail : projet@calory.fr</p>
             </div>
-            <div class="col-md-6">
-                <label for="firstname" class="form-label">Prénom</label>
-                <input type="text" class="form-control" id="inputfirstname" name="firstname">
+            <div class="col-6">
+                <form class="row" method="post" action="#">
+                    <div class="col-md-6">
+                        <label for="lastname" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="inputlastname" name="lastname">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="firstname" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="inputfirstname" name="firstname">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="company" class="form-label">Entreprise</label>
+                        <input type="text" class="form-control" id="inputcompany" name="company">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Téléphone</label>
+                        <input type="text" class="form-control" id="inputphone" name="phone">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="inputemail" name="email">
+                    </div>
+                    <div class="col-md-12">
+                        <label for="subject" class="form-label">Sujet</label>
+                        <select class="form-select" aria-label="Default select example" name="subject">
+                            <option selected>Choisir</option>
+                            <option value="1">Réalisation de plans</option>
+                            <option value="2">Dimensionnement</option>
+                            <option value="3">Études générales</option>
+                            <option value="4">Besoin de précisions</option>
+                            <option value="5">Autre demande</option>
+                        </select>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="textareamessage" rows="4" name="message"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-calory">Envoyer</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-md-12">
-                <label for="company" class="form-label">Entreprise</label>
-                <input type="text" class="form-control" id="inputcompany" name="company">
-            </div>
-            <div class="col-md-6">
-                <label for="phone" class="form-label">Téléphone</label>
-                <input type="text" class="form-control" id="inputphone" name="phone">
-            </div>
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="inputemail" name="email">
-            </div>
-            <div class="col-md-12">
-                <label for="subject" class="form-label">Sujet</label>
-                <select class="form-select" aria-label="Default select example" name="subject">
-                    <option selected>Choisir</option>
-                    <option value="1">Réalisation de plans</option>
-                    <option value="2">Dimensionnement</option>
-                    <option value="3">Études générales</option>
-                    <option value="4">Besoin de précisions</option>
-                    <option value="5">Autre demande</option>
-                </select>
-            </div>
-            <div class="col-md-12">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="textareamessage" rows="4" name="message"></textarea>
-            </div>
-            <div class="col-md-12">
-                <button type="submit" class="btn btn-primary">Envoyer</button>
-            </div>
-        </form>
+        </div>
     </section>
     <footer>
         <p>Copyright©<?= date('Y') ?> Calory - Tous droits réservés</p>

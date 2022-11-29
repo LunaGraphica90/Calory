@@ -1,3 +1,48 @@
+body{
+  font-family: 'Montserrat', sans-serif !important;
+  color:#004e65 !important;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Abril Fatface', cursive;
+  color:#006a8a;
+}
 section {
+  padding:2em;
   min-height: 100vh;
+}
+
+section#about p{
+  text-align: justify;
+}
+
+.btn.btn-calory{
+  background: #004e65;
+  color:white;
+  text-transform: uppercase;
+}
+
+footer{
+  padding:0.2em 1em;
+  display:flex;
+  justify-content:space-between;
+  font-size:0.8em;
+}
+footer ul{
+  display:flex;
+  justify-content:end
+}
+
+footer li{
+  list-style-type:none;
+  margin: 0 0.5em;
+}
+
+footer a{
+  text-decoration:none;
+  color:#006a8a;
+}
+
+footer a:hover{
+  text-decoration:underline;
 }
