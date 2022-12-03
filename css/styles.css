@@ -27,11 +27,12 @@ h1 span{
 h2{
   font-family: 'Abril Fatface', cursive;
   color:#006a8a;
-  font-size:3em !important;
+  font-size:4em !important;
 }
 
 h5{
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .bolder{
@@ -40,7 +41,7 @@ h5{
 
 #about h2, #contact h2{
   color:white;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 section {
@@ -57,12 +58,12 @@ header.sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index:1;
+  z-index:10;
 }
 
 .corner{
-  width:51px;
-  height:7px;
+  width:60px;
+  height:10px;
   position:absolute;
   z-index:1;
   background: url("../images/blue-rectangle.png")right bottom no-repeat;
@@ -70,12 +71,12 @@ header.sticky {
 
 .corner.header{
   right:0;
-  bottom:-2px;
+  bottom:-3px;
 }
 
 .corner.footer{
   left:0;
-  top:-5px;
+  top:-7px;
 }
 
 nav{
@@ -138,9 +139,9 @@ header .contact p{
 section#home{
   margin-top:112px;
   background: #e9f6fc;
-  background: -moz-linear-gradient(60deg,  #e9f6fc 0%, #e9f6fc 30%, #e9f6fc 30%, #ffffff 30%, #ffffff 100%);
-  background: -webkit-linear-gradient(60deg,  #e9f6fc 0%,#e9f6fc 30%,#e9f6fc 30%,#ffffff 30%,#ffffff 100%);
-  background: linear-gradient(60deg,  #e9f6fc 0%,#e9f6fc 30%,#e9f6fc 30%,#ffffff 30%,#ffffff 100%);
+  background: -moz-linear-gradient(60deg,  #e9f6fc 0%, #e9f6fc 40%, #e9f6fc 40%, #ffffff 40%, #ffffff 100%);
+  background: -webkit-linear-gradient(60deg,  #e9f6fc 0%,#e9f6fc 40%,#e9f6fc 40%,#ffffff 40%,#ffffff 100%);
+  background: linear-gradient(60deg,  #e9f6fc 0%,#e9f6fc 40%,#e9f6fc 40%,#ffffff 40%,#ffffff 100%);
 /*   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fc', endColorstr='#ffffff',GradientType=1 ); */
   display:flex;
   flex-direction: column;
@@ -153,7 +154,7 @@ section#home{
   border-radius: 1.2em 0.5em;
   overflow: hidden;
   width: fit-content;
-  padding: 0.5em 2.5em;
+  padding: 1em 2.5em;
   margin-right: -1.8em;
   margin-top: 2em;
   align-self: flex-end;
@@ -162,6 +163,10 @@ section#home{
 .pictos{
   transform: skew(-35deg, 0deg);
   margin:0 1em;
+}
+
+.home-content{
+  position: relative;
 }
 
 div.mask-text {
@@ -173,7 +178,7 @@ div.mask-text {
   background-color: #004e65;
   padding: 5em 5em 5em 35em;
   margin-left: -25em;
-  z-index:10;
+  z-index:1;
 }
 
 .mask-text h1{
@@ -194,6 +199,28 @@ img.home-image {
   left: -8em;
   top: -10em;
   width: 80vw;
+}
+
+.cadre {
+  width: 55vw;
+  height: 40vh;
+  z-index: 2;
+  border: white solid 0.2em;
+  position: absolute;
+  transform: skew(35deg, 0deg);
+  border-radius: 3em 0.7em;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5); 
+  box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.5);
+}
+
+.cadre.one {
+  top: 5em;
+  left: -18em;
+}
+
+.cadre.two {
+  bottom: 1em;
+  right: -58em;
 }
 
 section#about{
@@ -217,6 +244,7 @@ section#about p{
 
 section#services{
   background: url("../images/lines.png")left bottom no-repeat;
+  background-size: contain;
 }
 
 .content-services {
@@ -276,6 +304,11 @@ section#contact{
   justify-content: space-around;
   color:#004e65;
   text-transform:uppercase;
+}
+
+label{
+  color:#004e65 !important;
+  font-weight:500 !important;
 }
 
 .btn.btn-calory{

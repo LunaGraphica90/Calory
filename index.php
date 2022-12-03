@@ -54,11 +54,12 @@
                 <img class="pictos" src="images/vent.png" alt="Ventilation">
             </div>
 
-            <div class="d-flex align-items-center mt-5">
+            <div class="home-content d-flex align-items-center mt-5">
+                <div class="cadre one"></div>
                 <div class="mask-text col-md-4">
                     <h1>La maîtrise <span><br>des fluides <br>et de l'énergie</span></h1>
                 </div>
-                
+                <div class="cadre two"></div>
                 <div class="mask-image col-md-8">
                     <img class="home-image" src="images/ImageAccueil2_NB.jpg">
                 </div>
