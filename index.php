@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calory - Bureau d'études - La maîtrise des fluides et de l’énergie</title>
+    <title>Calory - Ingénierie fluides - La maîtrise des fluides et de l’énergie</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="css/styles.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -30,7 +30,7 @@
                         <a class="nav-link" href="#about">À propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services proposés</a>
+                        <a class="nav-link" href="#services">Nos services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -47,9 +47,21 @@
     </header>
     <!-- <div class=container-fluid> -->
         <section id="home">
-            <h1>Calory, la maîtrise des fluides et de l'énergie</h1>
-            <div class="masque-image">
-                <div class="image"></div>
+            <div id="pictos">
+                <img class="pictos" src="images/clim.png" alt="Climatisation">
+                <img class="pictos" src="images/chauff.png" alt="Chauffage">
+                <img class="pictos" src="images/plomb.png" alt="Plomberie">
+                <img class="pictos" src="images/vent.png" alt="Ventilation">
+            </div>
+
+            <div class="d-flex align-items-center mt-5">
+                <div class="mask-text col-md-4">
+                    <h1>La maîtrise <span><br>des fluides <br>et de l'énergie</span></h1>
+                </div>
+                
+                <div class="mask-image col-md-8">
+                    <img class="home-image" src="images/ImageAccueil2_NB.jpg">
+                </div>
             </div>
         </section>
         <section id="about">
@@ -61,24 +73,43 @@
             </div>
         </section>
         <section id="services">
-            <h2>Services proposés</h2>
-            <p>Calory vous propose des solutions pour l’étude de vos projets en génie climatique.</p>
-            <p>Phase d'exécution :</p>
-            <ul>
-                <li>Schémas de principe hydraulique et/ou aéraulique</li>
-                <li>Synoptiques des colonnes (plomberie, chauffage, ventilation)</li>
-                <li>Plans de réseaux</li>
-                <li>Plans de réservations</li>
-                <li>Schémas et détails de locaux techniques</li>
-                <li>Synthèse avec les autres corps d’état</li>
-            </ul>
-            <p>Phase préparatoire :</p>
-            <ul>
-                <li>Dimensionnement des installations</li>
-                <li>Calculs des déperditions et apports</li>
-                <li>Calculs des réseaux (hydraulique et aérauliques)</li>
-                <li>Sélection du matériel</li>
-            </ul>
+            <div class="content-services">
+                <h2>Nos services</h2>
+                <p>Calory vous propose des solutions pour l’étude de vos projets en génie climatique.</p>
+
+                <div id="services-cards">
+                    <div class="card prepa" >
+                        <img class="card-img-top" src="images/ImageServices2.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Phase préparatoire</h5>
+                            <ul>
+                                <li>Dimensionnement des installations</li>
+                                <li>Calculs des déperditions et apports</li>
+                                <li>Calculs des réseaux (hydraulique et aérauliques)</li>
+                                <li>Sélection du matériel</li>
+                            </ul>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        </div>
+                    </div>
+
+                    <div class="card" >
+                        <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Phase d'exécution</h5>
+                            <ul>
+                                <li>Schémas de principe hydraulique et/ou aéraulique</li>
+                                <li>Synoptiques des colonnes (plomberie, chauffage, ventilation)</li>
+                                <li>Plans de réseaux</li>
+                                <li>Plans de réservations</li>
+                                <li>Schémas et détails de locaux techniques</li>
+                                <li>Synthèse avec les autres corps d’état</li>
+                            </ul>
+                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
         <section id="contact" class="contact">
             <div class="col-md-8">
@@ -139,7 +170,8 @@
                 </div>
             </div>
                 <div class="col-md-4 px-0 contact-image">
-                    <img src="images/ImageContact.jpg"  class="img-fluid contact" alt="Responsive image">
+                    <div class="contact-bkg"></div>
+                    <!-- <img src="images/ImageContact.jpg"  class="img-fluid contact" alt="Responsive image"> -->
                 </div>
         </section>
     <!-- </div> -->
