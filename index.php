@@ -19,6 +19,10 @@
         <nav class="navbar navbar-expand-lg" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href=""><img src="images/logo.png" alt="Logo Calory" ></a>
+                <div class="contact mobile">
+                        <p class="phone">07 69 15 42 96</p>
+                        <p class="mail">projet@calory.fr</p>
+                    </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,7 +41,7 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     </ul>
-                    <div class="contact">
+                    <div class="contact desktop">
                         <p class="phone">07 69 15 42 96</p>
                         <p class="mail">projet@calory.fr</p>
                     </div>

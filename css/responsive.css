@@ -1,0 +1,34 @@
+@media screen and (max-width: 1103px) {
+    nav a{
+        margin:0 0.4em;
+    }
+
+    a.navbar-brand img{
+        max-width:195px;
+    }
+
+    header .contact {
+        padding: 0.3em 0.3em;
+        margin-right: 0.5em;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    button.navbar-toggler{
+        margin-right:1em;
+        background:#004e65 !important;
+        border-radius:0;
+        border:none;
+    }
+    .navbar-toggler-icon{
+        background:url("../images/burger-bar.png") no-repeat center !important;
+    }
+
+    .contact.desktop{
+        display: none;
+    }
+
+    .contact.mobile{
+        display: flex;
+    }
+}

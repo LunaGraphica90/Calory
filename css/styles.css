@@ -109,6 +109,10 @@ nav a.active {
   color:white;
 }
 
+.contact.mobile{
+  display: none;
+}
+
 header .contact{
   border-radius: 0.5em;
   padding: 0.3em 0.8em;
