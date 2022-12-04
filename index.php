@@ -115,9 +115,9 @@
 
         </section>
         <section id="contact" class="contact">
-            <div class="col-md-8">
+            <div class="col-xl-8">
                 <div class="row">
-                    <div class="col-6 text-contact">
+                    <div class="col-lg-6 text-contact">
                         <h2>Contact</h2>
                         <p class="bolder">Vous voulez des précisions sur les prestations ? Vous souhaitez discuter de votre projet ?</p>
                         <p>N’hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail</br>(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)</p>
@@ -126,7 +126,7 @@
                         <p class="phone ms-3">Tél. : 07 69 15 42 96</p>
                         <p class="mail ms-3">Mail : projet@calory.fr</p>
                     </div>
-                    <div class="col-md-6 px-5">
+                    <div class="col-lg-6 p-5">
                         <div id="formulaire" class="p-4">
                             <form class="row" method="post" action="#">
                                 <div class="col-6">
@@ -172,7 +172,7 @@
                     </div>
                 </div>
             </div>
-                <div class="col-md-4 px-0 contact-image">
+                <div class="col-xl-4 px-0 contact-image">
                     <div class="contact-bkg"></div>
                 </div>
         </section>

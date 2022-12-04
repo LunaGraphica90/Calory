@@ -1,3 +1,28 @@
+
+@media screen and (max-width:1325px){
+    .content-about {
+        width: 45%;
+    }
+
+    .content-services {
+        margin: 3em 4em;
+    }
+    
+    .card{
+        margin: 0 2.5em;
+    }
+}
+
+@media screen and (max-width:1162px){
+    .content-about {
+        width: 55%;
+    }
+    
+    .card{
+        margin: 0 2em;
+    }
+}
+
 @media screen and (max-width: 1103px) {
     nav a{
         margin:0 0.4em;
@@ -13,22 +38,41 @@
     }
 }
 
+@media screen and (max-width: 1069px){
+    .content-services {
+        margin: 3em 2em;
+    }
+}
+
 @media screen and (max-width: 1035px){
     .content-footer{
         display:block;
     }
 
     footer p{
-        text-align:center;    
+        text-align:center;
+        margin-bottom: 1em !important;
     }
     
     footer ul{
         justify-content: center;
         padding-left:0 !important;
+        flex-wrap: wrap;
+        text-align: center;
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1005px){
+    .content-services {
+        margin: 3em 1em;
+    }
+
+    .card{
+        margin: 0 0.5em;
+    }
+}
+
+@media screen and (max-width: 991px) {
     button.navbar-toggler{
         margin-right:1em;
         background:#004e65 !important;
@@ -45,5 +89,41 @@
 
     .contact.mobile{
         display: flex;
+    }
+}
+
+@media screen and (max-width: 879px){
+    .content-about {
+        width: 80%;
+        margin:0 auto
+    }
+    
+    #services-cards{
+        flex-direction:column;
+        background:none;
+    }
+
+    .content-services {
+        margin: 1em 1em;
+        padding-bottom:0;
+    }
+
+    .card-img-top{
+        margin-bottom:1em;
+    }
+
+    .card.prepa {
+        border-bottom: none !important;
+    }
+}
+
+@media screen and (max-width: 615px){
+    .content-about {
+        width: 100%;
+        margin:0 1em;
+    }
+
+    .contact.mobile{
+        display: none;
     }
 }

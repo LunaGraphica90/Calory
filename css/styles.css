@@ -254,11 +254,12 @@ section#about p{
 section#services{
   background: url("../images/lines.png")left bottom no-repeat;
   background-size: contain;
+  padding-bottom: 0.2em;
 }
 
 .content-services {
     margin: 3em 6em;
-    padding: 0 3em;
+    padding: 0 3em 3em;
     border-left: 1em #004e65 solid;
 }
 
