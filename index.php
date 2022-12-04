@@ -7,6 +7,7 @@
     <title>Calory - Ingénierie fluides - La maîtrise des fluides et de l’énergie</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,7 +46,6 @@
             </div>
         </nav>
     </header>
-    <!-- <div class=container-fluid> -->
         <section id="home">
             <div id="pictos">
                 <img class="pictos" src="images/clim.png" alt="Climatisation">
@@ -69,14 +69,14 @@
             <div class="content-about">
                 <h2>À propos</h2>
                 <p>Calory vous accompagne dans l’exécution de vos projets, de la préparation à la réception.</p>
-                <p>Il est aujourd’hui indispensable d’avoir des documents de travail clairs et précis pour communiquer avec les différents interlocuteurs du projet (La maîtrise d’ouvrage, la maîtrise d’oeuvre, les autres lots…), et également pour que les hommes de terrain puissent avoir toutes les billes à la bonne réalisation de l’ouvrage.</p>
-                <p>Plans d’exécution, plans de réservations, notes de calculs, schémas de principe, détails et élévations, fiches produits, DOE… Calory vous propose de vous décharger de la partie études de vos projets, au travers de l’ensemble des documents nécessaires au bon accomplissement de ceux ci.</p>
+                <p>Il est aujourd’hui indispensable d’avoir des documents de travail clairs et précis pour communiquer avec les différents interlocuteurs du projet (La maîtrise d’ouvrage, la maîtrise d’œuvre, les autres lots…), et également pour que les hommes de terrain puissent avoir toutes les billes à la bonne réalisation de l’ouvrage.</p>
+                <p>Plans d’exécution, plans de réservations, notes de calculs, schémas de principe, détails et élévations, fiches produits, DOE… Calory vous propose de vous décharger de la partie études de vos projets de <em>plomberie, chauffage, ventilation et climatisation</em>, au travers de l’ensemble des documents nécessaires au bon accomplissement de ceux-ci.</p>
             </div>
         </section>
         <section id="services">
             <div class="content-services">
                 <h2>Nos services</h2>
-                <p>Calory vous propose des solutions pour l’étude de vos projets en génie climatique.</p>
+                <p>Calory vous propose des solutions pour l’étude de vos projets en plomberie et génie climatique (chauffage, ventilation, climatisation), de la préparation à l’exécution.</p>
 
                 <div id="services-cards">
                     <div class="card prepa" >
@@ -89,7 +89,6 @@
                                 <li>Calculs des réseaux (hydraulique et aérauliques)</li>
                                 <li>Sélection du matériel</li>
                             </ul>
-                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                         </div>
                     </div>
 
@@ -105,7 +104,6 @@
                                 <li>Schémas et détails de locaux techniques</li>
                                 <li>Synthèse avec les autres corps d’état</li>
                             </ul>
-                            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                         </div>
                     </div>
                 </div>
@@ -172,10 +170,8 @@
             </div>
                 <div class="col-md-4 px-0 contact-image">
                     <div class="contact-bkg"></div>
-                    <!-- <img src="images/ImageContact.jpg"  class="img-fluid contact" alt="Responsive image"> -->
                 </div>
         </section>
-    <!-- </div> -->
     <footer>
         <div class="content-footer">
             <div class="corner footer"></div>

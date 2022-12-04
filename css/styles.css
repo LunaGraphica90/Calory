@@ -35,6 +35,11 @@ h5{
   font-weight: 600;
 }
 
+em{
+  font-style: normal;
+  font-weight: 600;
+}
+
 .bolder{
   font-weight:500;
 }
