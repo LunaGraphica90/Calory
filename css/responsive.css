@@ -13,6 +13,21 @@
     }
 }
 
+@media screen and (max-width: 1035px){
+    .content-footer{
+        display:block;
+    }
+
+    footer p{
+        text-align:center;    
+    }
+    
+    footer ul{
+        justify-content: center;
+        padding-left:0 !important;
+    }
+}
+
 @media screen and (max-width: 992px) {
     button.navbar-toggler{
         margin-right:1em;
