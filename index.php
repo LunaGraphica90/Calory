@@ -58,14 +58,14 @@
                 <img class="pictos" src="images/vent.png" alt="Ventilation">
             </div>
 
-            <div class="home-content d-flex align-items-center mt-5">
+            <div class="home-content mt-5">
                 <div class="cadre one"></div>
-                <div class="mask-text col-md-4">
+                <div class="mask-text col-lg-4 col-md-12">
                     <h1>La maîtrise <span><br>des fluides <br>et de l'énergie</span></h1>
                 </div>
                 <div class="cadre two"></div>
-                <div class="mask-image col-md-8">
-                    <img class="home-image" src="images/ImageAccueil2_NB.jpg">
+                <div class="mask-image col-lg-8 col-md-12">
+                    <img class="home-image img-fluid" src="images/ImageAccueil2_NB.jpg">
                 </div>
             </div>
         </section>
@@ -116,7 +116,7 @@
         </section>
         <section id="contact" class="contact">
             <div class="col-xl-8">
-                <div class="row">
+                <div class="contact-row">
                     <div class="col-lg-6 text-contact">
                         <h2>Contact</h2>
                         <p class="bolder">Vous voulez des précisions sur les prestations ? Vous souhaitez discuter de votre projet ?</p>

@@ -1,5 +1,26 @@
+@media screen and (max-width:1675px){
+    .cadre.two {
+        right: -60em;
+    }
+}
+
+@media screen and (max-width:1525px){
+    .cadre.two {
+        right: -65em;
+    }
+
+    img.home-image {
+        left: -20em;
+    }
+        
+}
 
 @media screen and (max-width:1325px){
+
+    img.home-image {
+        left: -25em;
+    }
+    
     .content-about {
         width: 45%;
     }
@@ -10,6 +31,15 @@
     
     .card{
         margin: 0 2.5em;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    .cadre.one {
+        left: -30em;
+    }
+    div.mask-text {
+        padding: 5em 5em 5em 28em;
     }
 }
 
@@ -35,6 +65,10 @@
     header .contact {
         padding: 0.3em 0.3em;
         margin-right: 0.5em;
+    }
+
+    img.home-image {
+        left: -30em;
     }
 }
 
@@ -90,6 +124,20 @@
     .contact.mobile{
         display: flex;
     }
+
+    .cadre.one {
+        left: -30em;
+        top:7em;
+        height: 285px;
+    }
+    
+    .mask-text{
+        padding:2em 1em 2em 28em !important;
+    }
+
+    div.mask-image {
+        margin-left: -8em;
+    }
 }
 
 @media screen and (max-width: 879px){
@@ -117,6 +165,47 @@
     }
 }
 
+@media screen and (max-width: 770px){
+     .home-content{
+        display:block !important
+    }
+
+    .cadre, .mask-text br{
+        display:none;
+    }
+
+    div.mask-text {
+        width: auto;
+        transform: none;
+        border-radius: 0;
+        margin-left: 0;
+        padding: 1em !important;
+        font-size: smaller;
+    }
+
+    .mask-text h1{
+        transform: none;
+    }
+
+    div.mask-image{
+        width: auto;
+        transform: none;
+        border-radius: 0;
+        margin-bottom: 2em;
+        height: auto;
+        margin-left:0;
+    }
+
+    img.home-image {
+        transform: none;
+        position: relative;
+        max-width: 100%;
+        left: 0;
+        top: 0;
+    }
+
+}
+
 @media screen and (max-width: 615px){
     .content-about {
         width: 100%;
@@ -125,5 +214,23 @@
 
     .contact.mobile{
         display: none;
+    }
+}
+
+@media screen and (max-width: 383px){
+    #pictos {
+        transform: none;
+        width: 100% !important;
+        padding: 1em;
+        margin-top: 1em;
+        border-radius:0;
+        margin-right:0;
+        justify-content:center;
+        display: flex;
+    }
+
+    .pictos {
+        transform: none;
+        margin: 0 0.5em;
     }
 }

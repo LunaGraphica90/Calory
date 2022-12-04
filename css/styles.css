@@ -148,9 +148,9 @@ header .contact p{
 section#home{
   margin-top:112px;
   background: #e9f6fc;
-  background: -moz-linear-gradient(60deg,  #e9f6fc 0%, #e9f6fc 40%, #e9f6fc 40%, #ffffff 40%, #ffffff 100%);
-  background: -webkit-linear-gradient(60deg,  #e9f6fc 0%,#e9f6fc 40%,#e9f6fc 40%,#ffffff 40%,#ffffff 100%);
-  background: linear-gradient(60deg,  #e9f6fc 0%,#e9f6fc 40%,#e9f6fc 40%,#ffffff 40%,#ffffff 100%);
+  background: -moz-linear-gradient(55deg,  #e9f6fc 0%, #e9f6fc 40%, #e9f6fc 40%, #ffffff 40%, #ffffff 100%);
+  background: -webkit-linear-gradient(55deg,  #e9f6fc 0%,#e9f6fc 40%,#e9f6fc 40%,#ffffff 40%,#ffffff 100%);
+  background: linear-gradient(55deg,  #e9f6fc 0%,#e9f6fc 40%,#e9f6fc 40%,#ffffff 40%,#ffffff 100%);
 /*   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9f6fc', endColorstr='#ffffff',GradientType=1 ); */
   display:flex;
   flex-direction: column;
@@ -176,6 +176,8 @@ section#home{
 
 .home-content{
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 div.mask-text {
@@ -198,21 +200,21 @@ div.mask-image {
   transform: skew(35deg, 0deg);
   border-radius: 3em 0.7em;
   overflow: hidden;
-  height: 65vh;
+  height: 560px;
   margin-left:-5em;
 }
 
 img.home-image {
   transform: skew(-35deg, 0deg) translateX(-5%);
   position: absolute;
-  left: -8em;
-  top: -10em;
-  width: 80vw;
+  left: -12em;
+  top: -15em;
+  max-width: 1650px;
 }
 
 .cadre {
-  width: 55vw;
-  height: 40vh;
+  width: 1050px;
+  height: 320px;
   z-index: 2;
   border: white solid 0.2em;
   position: absolute;
@@ -304,6 +306,12 @@ section#contact{
   display:flex;
   justify-content:space-between;
   align-items:center;
+}
+
+
+.contact-row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #formulaire{
