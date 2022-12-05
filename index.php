@@ -18,7 +18,7 @@
         <div class="corner header"></div>
         <nav class="navbar navbar-expand-lg" id="navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href=""><img src="images/logo.png" alt="Logo Calory" ></a>
+                <a class="navbar-brand" href=""><img src="images/logoCalory.png" alt="Logo Calory" ></a>
                 <div class="contact mobile">
                         <p class="phone">07 69 15 42 96</p>
                         <p class="mail">projet@calory.fr</p>
