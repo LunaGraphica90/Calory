@@ -217,7 +217,7 @@
     }
 }
 
-@media screen and (max-width: 383px){
+@media screen and (max-width: 405px){
     #pictos {
         transform: none;
         width: 100% !important;
