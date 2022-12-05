@@ -28,18 +28,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Nos services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Nos services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
                     </ul>
                     <div class="contact desktop">
                         <p class="phone">07 69 15 42 96</p>
@@ -193,6 +193,8 @@
     <script type="text/javascript" src="js/stopfixNavigation.js"></script>
     <!-- GotoTop Button-->
     <script type="text/javascript" src="js/gototop.js"></script>
+    <!-- Collaped NavBar-->
+    <script type="text/javascript" src="js/collapedNav.js"></script>
 
 </body>
 </html>
