@@ -124,7 +124,7 @@
                 
                 <div id="services-cards">
                     <div class="card prepa">
-                            <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/servicepart1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">1</h5>
                                 <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à votre entière écoute. C’est à ce moment que nous mettons en lumière vos attentes.</p>
@@ -132,7 +132,7 @@
                         </div>
 
                         <div class="card prepa">
-                            <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/servicepart2.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">2</h5>
                                 <p>Si le besoin est, nous convenons d’un rendez-vous sur site, pour appréhender davantage les volumes et les contraintes éventuelles à l’élaboration de votre projet, et de votre cahier des charges.</p>
@@ -140,7 +140,7 @@
                         </div>
 
                         <div class="card">
-                            <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/servicepart3.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">3</h5>
                                 <p>Enfin, nous établissons un plan d’action pour atteindre vos objectifs. Pendant l’accompagnement, vous êtes et restez le maître à bord, nous avançons à votre rythme et après validation de chacune des étapes que nous aurons défini ensemble, jusqu’à l’aboutissement de votre projet.</p>
