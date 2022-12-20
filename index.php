@@ -35,7 +35,7 @@
                             <a class="nav-link" href="#about">À propos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#services">Nos services</a>
+                            <a class="nav-link" href="#services">Services aux particuliers et professionnels</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -72,15 +72,16 @@
         <section id="about">
             <div class="content-about">
                 <h2>À propos</h2>
-                <p>Calory vous accompagne dans l’exécution de vos projets, de la préparation à la réception.</p>
-                <p>Il est aujourd’hui indispensable d’avoir des documents de travail clairs et précis pour communiquer avec les différents interlocuteurs du projet (La maîtrise d’ouvrage, la maîtrise d’œuvre, les autres lots…), et également pour que les hommes de terrain puissent avoir toutes les billes à la bonne réalisation de l’ouvrage.</p>
-                <p>Plans d’exécution, plans de réservations, notes de calculs, schémas de principe, détails et élévations, fiches produits, DOE… Calory vous propose de vous décharger de la partie études de vos projets de <em>plomberie, chauffage, ventilation et climatisation</em>, au travers de l’ensemble des documents nécessaires au bon accomplissement de ceux-ci.</p>
+                <p>Dans le cadre d’une construction neuve ou d’une rénovation, il est indispensable d’avoir des documents de travail clairs et précis pour communiquer entre les différents acteurs du projet (Maîtrise d’ouvrage, Maîtrise d’œuvre, Entreprises…), pour protéger les intérêts de toutes les parties, et également pour que les compagnons puissent avoir toutes les billes à la bonne réalisation des travaux.</p>
+                <p>Après plusieurs années en entreprise, je suis arrivé à la conclusion que l’importance des études des projets est trop souvent minimisée, alors qu’elles sont la clé de voûte de ceux-ci pour leur parfaite exécution.</p>
+                <p>Plans de réseaux, plans de réservations, notes de calculs, schémas de principe, détails et élévations, sélection du matériel… Je peux vous apporter mon analyse et mon expertise, afin de vous décharger de la partie études de vos projets de plomberie, chauffage, ventilation et climatisation, au travers de l’ensemble des documents qui vous seront nécessaires de la préparation à l’achèvement.</p>
             </div>
         </section>
         <section id="services">
             <div class="content-services">
-                <h2>Nos services</h2>
-                <p>Calory vous propose des solutions pour l’étude de vos projets en plomberie et génie climatique (chauffage, ventilation, climatisation), de la préparation à l’exécution.</p>
+                <h2>Les services</h2>
+                <h3>Professionnels</h3>
+                <p>Je prends connaissance de la totalité des pièces que vous me fournissez qui délimitent votre projet. Ensuite, nous définissons ensemble vos besoins à partir de vos attentes et de vos objectifs. Pour finir, nous fixons la liste des documents attendus et je vous accompagne de la préparation du projet jusqu’au rendu final.</p>
 
                 <div id="services-cards">
                     <div class="card prepa" >
@@ -88,15 +89,16 @@
                         <div class="card-body">
                             <h5 class="card-title">Phase préparatoire</h5>
                             <ul>
-                                <li>Dimensionnement des installations</li>
-                                <li>Calculs des déperditions et apports</li>
-                                <li>Calculs des réseaux (hydraulique et aérauliques)</li>
-                                <li>Sélection du matériel</li>
+                                <li>Sélection des terminaux</li>
+                                <li>Sélection de la robinetterie</li>
+                                <li>Diffusion de fiches produits</li>
+                                <li>Dimensionnement des réseaux hydrauliques et aérauliques</li>
+                                <li>Calculs des déperditions et des apports</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="card" >
+                    <div class="card">
                         <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Phase d'exécution</h5>
@@ -111,6 +113,40 @@
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="content-services">
+                <h3>Particuliers</h3>
+                <p>Vous désirez concevoir ou rénover une salle de bains ou tout autre pièce d’eau, et vous souhaiteriez un accompagnement pour passer de l’idée à la réalité.<br>
+                Vous voulez installer une ventilation chez vous, ou revoir votre système de chauffage, et vous aimeriez être aiguillé sur la façon de procéder.<br>
+                Vous construisez, et vous avez besoin d’un regard extérieur sur vos plans fluides et les documents en votre possession avant la réalisation des travaux.</p>
+                <p style="text-align:center;">Quelque soit la nature de votre demande, voici le déroulé :</p>
+                
+                <div id="services-cards">
+                    <div class="card prepa">
+                            <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">1</h5>
+                                <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à votre entière écoute. C’est à ce moment que nous mettons en lumière vos attentes.</p>
+                            </div>
+                        </div>
+
+                        <div class="card prepa">
+                            <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">2</h5>
+                                <p>Si le besoin est, nous convenons d’un rendez-vous sur site, pour appréhender davantage les volumes et les contraintes éventuelles à l’élaboration de votre projet, et de votre cahier des charges.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">3</h5>
+                                <p>Enfin, nous établissons un plan d’action pour atteindre vos objectifs. Pendant l’accompagnement, vous êtes et restez le maître à bord, nous avançons à votre rythme et après validation de chacune des étapes que nous aurons défini ensemble, jusqu’à l’aboutissement de votre projet.</p>
+                            </div>
+                        </div>
+                    </div>
             </div>
 
         </section>
@@ -156,8 +192,9 @@
                                         <option value="1">Réalisation de plans</option>
                                         <option value="2">Dimensionnement</option>
                                         <option value="3">Études générales</option>
-                                        <option value="4">Besoin de précisions</option>
-                                        <option value="5">Autre demande</option>
+                                        <option value="4">Conception SDB</option>
+                                        <option value="5">Besoin de précisions</option>
+                                        <option value="6">Autre demande</option>
                                     </select>
                                 </div>
                                 <div class="col-12 mt-3">
