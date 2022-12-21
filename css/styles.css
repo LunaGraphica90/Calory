@@ -30,6 +30,11 @@ h2{
   font-size:4em !important;
 }
 
+h3 {
+  text-transform: uppercase;
+  margin: 1em 0 !important;
+}
+
 h5{
   text-transform: uppercase;
   font-weight: 600;
@@ -262,12 +267,11 @@ section#services{
 .content-services {
     margin: 3em 6em;
     padding: 0 3em 3em;
-    border-left: 1em #004e65 solid;
+    border-left: 0.6em #004e65 solid;
 }
 
 .content-services p{
   font-weight:500;
-  font-size:1.4em;
   margin: 1em 0 3em;
 }
 
@@ -295,6 +299,23 @@ section#services{
 .card-img-top{
   margin-bottom:5em;
   border-radius: 0 !important;
+}
+
+
+blockquote {
+  margin-left: 3em !important;
+  padding-left: 0.5em !important;
+  border-left: 3px solid #004e65;
+}
+
+.particular h5{
+  font-size:2.2em;
+  text-align: center;
+}
+
+.particular p{
+  font-weight: inherit;
+  margin:1em 0 0;
 }
 
 .text-contact{
