@@ -1,6 +1,26 @@
+@media screen and (max-width:1780px){
+    .services-cards.part{
+        background-size:0.22em;
+    }
+
+    .services-cards.part .card-img-top{
+        margin-bottom:2.5em;
+    }
+}
+
 @media screen and (max-width:1675px){
     .cadre.two {
         right: -60em;
+    }
+}
+
+@media screen and (max-width:1570px){
+    .services-cards.part{
+        background-size:0.16em;
+    }
+
+    .services-cards.part .card-img-top{
+        margin-bottom:2em;
     }
 }
 
@@ -13,6 +33,24 @@
         left: -20em;
     }
         
+}
+
+@media screen and (max-width:1490px){
+    .services-cards.part{
+        background-size:0.12em;
+    }
+
+    .services-cards.part .card-img-top{
+        margin-bottom:1.5em;
+    }
+}
+
+@media screen and (max-width:1402px){
+    header .contact{
+        flex-wrap: wrap;
+        width:min-content;
+        line-height: 2.2;
+    }
 }
 
 @media screen and (max-width:1325px){
@@ -40,6 +78,19 @@
     }
     div.mask-text {
         padding: 5em 5em 5em 28em;
+    }
+}
+
+@media screen and (max-width: 1244px){
+    nav li {
+        text-align: center;
+        margin: auto 0.5em;
+        max-width: 16em;
+    }
+    
+    nav a{
+        margin-right:0;
+        margin-left:0;
     }
 }
 
@@ -104,6 +155,14 @@
     .card{
         margin: 0 0.5em;
     }
+
+    .services-cards.part{
+        background-size:0.18em;
+    }
+
+    .services-cards.part .card-img-top{
+        margin-bottom:2.5em;
+    }
 }
 
 @media screen and (max-width: 991px) {
@@ -123,6 +182,8 @@
 
     .contact.mobile{
         display: flex;
+        flex-wrap:nowrap;
+        width:fit-content;
     }
 
     .cadre.one {
@@ -138,6 +199,10 @@
     div.mask-image {
         margin-left: -8em;
     }
+
+    .services-cards.part{
+        background-size:0.23em;
+    }
 }
 
 @media screen and (max-width: 879px){
@@ -146,7 +211,7 @@
         margin:0 auto
     }
     
-    #services-cards{
+    .services-cards{
         flex-direction:column;
         background:none;
     }
@@ -162,6 +227,14 @@
 
     .card.prepa {
         border-bottom: none !important;
+    }
+
+    .services-cards.part .card-img-top{
+        margin-bottom:0;
+    }
+
+    .card.particular{
+        margin-bottom:1em;
     }
 }
 

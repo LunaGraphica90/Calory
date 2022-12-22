@@ -275,12 +275,13 @@ section#services{
   margin: 1em 0 3em;
 }
 
-#services-cards {
+.services-cards {
     display: flex;
     justify-content: center;
     background: url("../images/blue-line.png")left 3em repeat-x;
     width: fit-content;
     margin: auto;
+    flex-wrap:wrap;
 }
 
 .card{

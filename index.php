@@ -84,7 +84,7 @@
                 <h3><iconify-icon inline icon="line-md:upload-loop" rotate="90deg" flip="horizontal"></iconify-icon> Professionnels</h3>
                 <p>Je prends connaissance de la totalité des pièces que vous me fournissez qui délimitent votre projet. Ensuite, nous définissons ensemble vos besoins à partir de vos attentes et de vos objectifs. Pour finir, nous fixons la liste des documents attendus et je vous accompagne de la préparation du projet jusqu’au rendu final.</p>
 
-                <div id="services-cards">
+                <div class="services-cards">
                     <div class="card prepa" >
                         <img class="card-img-top" src="images/ImageServices2.jpg" alt="Card image cap">
                         <div class="card-body">
@@ -126,31 +126,35 @@
 
                 <p style="text-align:center; font-weight:600;">Quelque soit la nature de votre demande, voici le déroulé :</p>
                 
-                <div id="services-cards">
+                <div class="services-cards part">
+                <div class="col-lg-4">
                     <div class="card particular">
-                            <img class="card-img-top" src="images/servicepart1.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/servpart1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title"><iconify-icon icon="tabler:square-rounded-number-1"></iconify-icon></h5>
-                                <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à votre entière écoute. C’est à ce moment que nous mettons en lumière vos attentes.</p>
+                                <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à votre entière écoute. C'est à ce moment que nous mettons en lumière vos attentes.</p>
                             </div>
                         </div>
-
+                </div>
+                <div class="col-lg-4">
                         <div class="card particular">
-                            <img class="card-img-top" src="images/servicepart2.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/servpart2.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title"><iconify-icon icon="tabler:square-rounded-number-2"></iconify-icon></h5>
-                                <p>Si le besoin est, nous convenons d’un rendez-vous sur site, pour appréhender davantage les volumes et les contraintes éventuelles à l’élaboration de votre projet, et de votre cahier des charges.</p>
+                                <p>Si le besoin est, nous convenons d'un rendez-vous sur site, pour appréhender davantage les volumes et les contraintes éventuelles à l'élaboration de votre projet, et de votre cahier des charges.</p>
                             </div>
                         </div>
-
+                </div>
+                <div class="col-lg-4">
                         <div class="card particular">
-                            <img class="card-img-top" src="images/servicepart3.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="images/servpart3.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title"><iconify-icon icon="tabler:square-rounded-number-3"></iconify-icon></h5>
-                                <p>Enfin, nous établissons un plan d’action pour atteindre vos objectifs. Pendant l’accompagnement, vous êtes et restez le maître à bord, nous avançons à votre rythme et après validation de chacune des étapes que nous aurons défini ensemble, jusqu’à l’aboutissement de votre projet.</p>
+                                <p>Enfin, nous établissons un plan d'action pour atteindre vos objectifs. Pendant l'accompagnement, vous êtes et restez le maître à bord, nous avançons à votre rythme et après validation de chacune des étapes que nous aurons défini ensemble, jusqu'à l'aboutissement de votre projet.</p>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
 
         </section>
