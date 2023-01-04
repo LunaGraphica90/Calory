@@ -296,16 +296,11 @@ section#services{
 }
 
 .card{
-  max-width: 22em;
-  margin: 0 5em;
+  max-width: 25em;
+  margin: 0 4.2em;
   border: none !important;
   border-radius : 0 !important;
   background:none !important;
-}
-
-.card.prepa{
-  border-bottom:#004e65 3em solid !important;
-  box-sizing: border-box !important;
 }
 
 .card-img-top{
@@ -334,6 +329,10 @@ blockquote {
 .text-contact{
   padding:0 3em !important;
   align-self: center;
+}
+
+.form-contact{
+  padding:3em 3em 3em 0;
 }
 
 section#contact{
@@ -429,4 +428,9 @@ footer a:hover{
 /* CSS pour antispam */
 .col-0 {
     display: none;
+}
+
+.antispam{
+  text-transform: none;
+  font-style:italic;
 }

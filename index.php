@@ -8,7 +8,6 @@
 
 session_start();
 
-
 // Mail destination formulaire
 $mail_destinataire = "contact@e-concept-applications.fr";
 
@@ -17,8 +16,6 @@ $mail_destinataire = "contact@e-concept-applications.fr";
 require_once("include/functions.php");
 
 require_once("include/header.php");
-
-
 
 
 // Tableau des sujets de mails :
@@ -134,7 +131,6 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
 }
 
 
-
 /***********************************/
 /* Génération du contrôle antispam */
 /***********************************/
@@ -187,13 +183,7 @@ eval("\$_SESSION[\"antispam\"] = ".$operation.";");
 $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
 
 
-
-
-
-
-
 ?>
-
 
         <section id="home">
             <div id="pictos">
@@ -210,30 +200,30 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                 </div>
                 <div class="cadre two"></div>
                 <div class="mask-image col-lg-8 col-md-12">
-<?php
-// Avec un alt, c'est mieux... ^^
-?>
-                    <img alt="Accueil Calory" class="home-image img-fluid" src="images/ImageAccueil2_NB.jpg">
+                    <?php
+                    // Avec un alt, c'est mieux... ^^
+                    ?>
+                    <img alt="" class="home-image img-fluid" src="images/ImageAccueil2_NB.jpg">
                 </div>
             </div>
         </section>
         <section id="about">
             <div class="content-about">
                 <h2>À propos</h2>
-                <p>Dans le cadre d’une construction neuve ou d’une rénovation, il est indispensable d’avoir des documents de travail clairs et précis pour communiquer entre les différents acteurs du projet (Maîtrise d’ouvrage, Maîtrise d’œuvre, Entreprises…), pour protéger les intérêts de toutes les parties, et également pour que les compagnons puissent avoir toutes les billes à la bonne réalisation des travaux.</p>
-                <p>Après plusieurs années en entreprise, je suis arrivé à la conclusion que l’importance des études des projets est trop souvent minimisée, alors qu’elles sont la clé de voûte de ceux-ci pour leur parfaite exécution.</p>
-                <p>Plans de réseaux, plans de réservations, notes de calculs, schémas de principe, détails et élévations, sélection du matériel… <strong>Je peux vous apporter mon analyse et mon expertise, afin de vous décharger de la partie études de vos projets de plomberie, chauffage, ventilation et climatisation</strong>, au travers de l’ensemble des documents qui vous seront nécessaires de la préparation à l’achèvement.</p>
+                <p>Dans le cadre d'une construction neuve ou d'une rénovation, il est indispensable d'avoir des documents de travail clairs et précis pour communiquer entre les différents acteurs du projet (Maîtrise d'ouvrage, Maîtrise d'œuvre, Entreprises…), pour protéger les intérêts de toutes les parties, et également pour que les compagnons puissent avoir toutes les billes à la bonne réalisation des travaux.</p>
+                <p>Après plusieurs années en entreprise, je suis arrivé à la conclusion que l'importance des études des projets est trop souvent minimisée, alors qu'elles sont la clé de voûte de ceux-ci pour leur parfaite exécution.</p>
+                <p>Plans de réseaux, plans de réservations, notes de calculs, schémas de principe, détails et élévations, sélection du matériel… <strong>Je peux vous apporter mon analyse et mon expertise, afin de vous décharger de la partie études de vos projets de plomberie, chauffage, ventilation et climatisation</strong>, au travers de l'ensemble des documents qui vous seront nécessaires de la préparation à l'achèvement.</p>
             </div>
         </section>
         <section id="services">
             <div class="content-services">
                 <h2>Les services</h2>
                 <h3><iconify-icon inline icon="line-md:upload-loop" rotate="90deg" flip="horizontal"></iconify-icon> Professionnels</h3>
-                <p>Je prends connaissance de la totalité des pièces que vous me fournissez qui délimitent votre projet. Ensuite, nous définissons ensemble <strong>vos besoins à partir de vos attentes et de vos objectifs</strong>. Pour finir, nous fixons la liste des documents attendus et je vous accompagne de la préparation du projet jusqu’au rendu final.</p>
+                <p>Je prends connaissance de la totalité des pièces que vous me fournissez qui délimitent votre projet. Ensuite, nous définissons ensemble <strong>vos besoins à partir de vos attentes et de vos objectifs</strong>. Pour finir, nous fixons la liste des documents attendus et je vous accompagne de la préparation du projet jusqu'au rendu final.</p>
 
                 <div class="services-cards">
-                    <div class="card prepa" >
-                        <img class="card-img-top" src="images/ImageServices2.jpg" alt="Card image cap">
+                    <div class="card" >
+                        <img class="card-img-top" src="images/ImageServices2.jpg" alt="Phase préparatoire">
                         <div class="card-body">
                             <h5 class="card-title">Phase préparatoire</h5>
                             <ul>
@@ -247,7 +237,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                     </div>
 
                     <div class="card">
-                        <img class="card-img-top" src="images/ImageServices1.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="images/ImageServices1.jpg" alt="Phase d'exécution">
                         <div class="card-body">
                             <h5 class="card-title">Phase d'exécution</h5>
                             <ul>
@@ -256,7 +246,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                                 <li>Plans de réseaux</li>
                                 <li>Plans de réservations</li>
                                 <li>Schémas et détails de locaux techniques</li>
-                                <li>Synthèse avec les autres corps d’état</li>
+                                <li>Synthèse avec les autres corps d'état</li>
                             </ul>
                         </div>
                     </div>
@@ -266,9 +256,9 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
             <div class="content-services">
                 <h3><iconify-icon inline icon="line-md:upload-loop" rotate="90deg" flip="horizontal"></iconify-icon> Particuliers</h3>
                 <blockquote>
-                    <p><iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous désirez concevoir ou rénover une salle de bains ou tout autre pièce d’eau, et <strong>vous souhaiteriez un accompagnement</strong> pour passer de l’idée à la réalité.<br>
+                    <p><iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous désirez concevoir ou rénover une salle de bains ou tout autre pièce d'eau, et <strong>vous souhaiteriez un accompagnement</strong> pour passer de l'idée à la réalité.<br>
                     <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous voulez installer une ventilation chez vous, ou revoir votre système de chauffage, et <strong>vous aimeriez être aiguillé</strong> sur la façon de procéder.<br>
-                    <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous construisez, et <strong>vous avez besoin d’un regard extérieur</strong> sur vos plans fluides et les documents en votre possession avant la réalisation des travaux.</p>
+                    <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous construisez, et <strong>vous avez besoin d'un regard extérieur</strong> sur vos plans fluides et les documents en votre possession avant la réalisation des travaux.</p>
                 </blockquote>
 
                 <h4>Quelque soit la nature de votre demande, voici le déroulé :</h4>
@@ -278,9 +268,9 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                     <div class="card particular">
                             <img class="card-img-top" src="images/servpart1.jpg" alt="Card image cap">
                             <div class="card-body">
-<?php
-// Un espace insécable &nbsp; à gauche et à droite de l'icône pour que le validateur ne considère pas le <h5> comme vide.
-?>
+                                <?php
+                                // Un espace insécable &nbsp; à gauche et à droite de l'icône pour que le validateur ne considère pas le <h5> comme vide.
+                                ?>
                                 <h5 class="card-title">&nbsp;<iconify-icon icon="tabler:square-rounded-number-1"></iconify-icon>&nbsp;</h5>
                                 <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à <strong>votre entière écoute</strong>. C'est à ce moment que nous mettons en lumière <strong>vos attentes</strong>.</p>
                             </div>
@@ -311,43 +301,43 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
         <section id="contact" class="contact">
             <div class="col-xl-8">
                 <div class="contact-row">
-                    <div class="col-lg-6 text-contact">
+                    <div class="col-lg-5 text-contact">
                         <h2>Contact</h2>
-                        <p class="bolder">Vous voulez des précisions sur les prestations ? Vous souhaitez discuter de votre projet ?</p>
-<?php
-// </br> n'existe pas ^^ C'est <br> ou <br /> ;) 
-?>
-                        <p>N’hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail<br><?php //(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)
+                        <p class="bolder">Vous voulez des précisions sur les prestations ? <br>Vous souhaitez discuter de votre projet ?</p>
+                        <?php
+                        // </br> n'existe pas ^^ C'est <br> ou <br /> ;) 
+                        ?>
+                        <p>N'hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail<br><?php //(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)
                         ?></p>
                         <p class="text-uppercase">Calory : </p>
                         <p class="city ms-3">Belfort (90)</p>
                         <p class="phone ms-3"><a href="tel:+33769154296">07 69 15 42 96</a></p>
                         <p class="mail ms-3"><?=encode_mail("projet@calory.fr")?></p>
                     </div>
-                    <div class="col-lg-6 p-5">
+                    <div class="col-lg-7 form-contact">
                         <div id="formulaire" class="p-4">
                             <form class="row" method="post" action="/#contact">
-<?php
-// Si on a une remarque à afficher, on ajoute une div en conséquence...
-if(isset($_SESSION["formulaire"]["remarque"])) {
-?>
-                                <div class="col-12 mt-3 alert alert-success">
-                                    <?=$_SESSION["formulaire"]["remarque"]?>
-                                </div>
-<?php
-}
+                                <?php
+                                // Si on a une remarque à afficher, on ajoute une div en conséquence...
+                                if(isset($_SESSION["formulaire"]["remarque"])) {
+                                ?>
+                                    <div class="col-12 mt-3 alert alert-success">
+                                        <?=$_SESSION["formulaire"]["remarque"]?>
+                                    </div>
+                                <?php
+                                }
 
-// Si on a une erreur à afficher, on ajoute une div en conséquence...
-if(isset($_SESSION["formulaire"]["erreur"])) {
-?>
-                                <div class="col-12 mt-3 alert alert-danger">
-                                    <?=$_SESSION["formulaire"]["erreur"]?>
-                                </div>
-<?php                                                                
-} 
+                                // Si on a une erreur à afficher, on ajoute une div en conséquence...
+                                if(isset($_SESSION["formulaire"]["erreur"])) {
+                                ?>
+                                    <div class="col-12 mt-3 alert alert-danger">
+                                        <?=$_SESSION["formulaire"]["erreur"]?>
+                                    </div>
+                                <?php                                                                
+                                } 
 
-// Le code HTML qui suit est masqué (par la classe col-0) et sert au contrôle antispam (les cases DOIVENT rester vides)
-?>
+                                // Le code HTML qui suit est masqué (par la classe col-0) et sert au contrôle antispam (les cases DOIVENT rester vides)
+                                ?>
                                 <div class="col-0">
                                     <label for="nom" class="form-label">Nom</label>
                                     <input type="text" class="form-control" id="nom" name="nom" value="" placeholder="Antispam - Ne pas remplir cette case">
@@ -364,11 +354,12 @@ if(isset($_SESSION["formulaire"]["erreur"])) {
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" id="email" name="email" value="" placeholder="Antispam - Ne pas remplir cette case">
                                 </div>
-<?php
-// On reprend le code normal.
 
-// !!! Les attributs for doivent correspondre aux id, pas aux name ! ;) 
-?>
+                                <?php
+                                // On reprend le code normal.
+
+                                // !!! Les attributs for doivent correspondre aux id, pas aux name ! ;) 
+                                ?>
                                 <div class="col-6">
                                     <label for="inputlastname" class="form-label">Nom</label>
                                     <input type="text" class="form-control" id="inputlastname" name="lastname" value="<?php if(isset($_SESSION["formulaire"]["nom"])) echo $_SESSION["formulaire"]["nom"];?>" required>
@@ -383,9 +374,9 @@ if(isset($_SESSION["formulaire"]["erreur"])) {
                                 </div>
                                 <div class="col-6 mt-3">
                                     <label for="inputphone" class="form-label">Téléphone</label>
-<?php
-// type="tel" ==> Clavier adapté sur smartphone ;) 
-?>
+                                    <?php
+                                    // type="tel" ==> Clavier adapté sur smartphone ;) 
+                                    ?>
                                     <input type="tel" class="form-control" id="inputphone" name="phone" value="<?php if(isset($_SESSION["formulaire"]["nom"])) echo $_SESSION["formulaire"]["tel"];?>">
                                 </div>
                                 <div class="col-6 mt-3">
@@ -395,19 +386,19 @@ if(isset($_SESSION["formulaire"]["erreur"])) {
                                 <div class="col-12 mt-3">
                                     <label for="subject" class="form-label">Sujet</label>
                                     <select class="form-select" aria-label="Default select example" id="subject" name="subject" required>
-<?php
-// On sélectionne la première option si on n'a pas de sujet déjà sélectionné...
-// On met également l'option à disabled pour que la saisie soit invalide avec le required, et on met un value à "" pour que le validateur W3C soit content.
-?>
+                                        <?php
+                                        // On sélectionne la première option si on n'a pas de sujet déjà sélectionné...
+                                        // On met également l'option à disabled pour que la saisie soit invalide avec le required, et on met un value à "" pour que le validateur W3C soit content.
+                                        ?>
                                         <option value="" disabled<?php if(!isset($_SESSION["formulaire"]["sujet"])) echo " selected"; ?>>Choisir</option>
-<?php
-// On boucle sur la liste des sujets, et on sélectionne le bon au passage si on a un formulaire déjà rempli...
-foreach($sujets as $id_sujet => $sujet) {
-?>
+                                        <?php
+                                        // On boucle sur la liste des sujets, et on sélectionne le bon au passage si on a un formulaire déjà rempli...
+                                        foreach($sujets as $id_sujet => $sujet) {
+                                        ?>
                                         <option value="<?=$id_sujet?>"<?php if(isset($_SESSION["formulaire"]["sujet"]) and $_SESSION["formulaire"]["sujet"] == $id_sujet) echo " selected"; ?>><?=$sujet?></option>
-<?php
-}
-?>
+                                        <?php
+                                        }
+                                        ?>
                                     </select>
                                 </div>
                                 <div class="col-12 mt-3">
@@ -415,7 +406,7 @@ foreach($sujets as $id_sujet => $sujet) {
                                     <textarea class="form-control" id="textareamessage" rows="6" name="message" required><?php if(isset($_SESSION["formulaire"]["nom"])) echo $_SESSION["formulaire"]["message"];?></textarea>
                                 </div>
                                 <div class="col-12 mt-3">
-                                     <label for="antispam" class="form-label">Contrôle antispam :<br>
+                                     <label for="antispam" class="form-label antispam">Contrôle antispam :<br>
                                      Combien font <?=$operation_libelle?>&nbsp;?</label>
                                      <input type="number" class="form-control" name="<?=$_SESSION["champ_antispam"]?>" id="antispam" required>
                                 </div>
