@@ -295,14 +295,14 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                 <h2>À propos</h2>
                 <p>Dans le cadre d’une construction neuve ou d’une rénovation, il est indispensable d’avoir des documents de travail clairs et précis pour communiquer entre les différents acteurs du projet (Maîtrise d’ouvrage, Maîtrise d’œuvre, Entreprises…), pour protéger les intérêts de toutes les parties, et également pour que les compagnons puissent avoir toutes les billes à la bonne réalisation des travaux.</p>
                 <p>Après plusieurs années en entreprise, je suis arrivé à la conclusion que l’importance des études des projets est trop souvent minimisée, alors qu’elles sont la clé de voûte de ceux-ci pour leur parfaite exécution.</p>
-                <p>Plans de réseaux, plans de réservations, notes de calculs, schémas de principe, détails et élévations, sélection du matériel… Je peux vous apporter mon analyse et mon expertise, afin de vous décharger de la partie études de vos projets de plomberie, chauffage, ventilation et climatisation, au travers de l’ensemble des documents qui vous seront nécessaires de la préparation à l’achèvement.</p>
+                <p>Plans de réseaux, plans de réservations, notes de calculs, schémas de principe, détails et élévations, sélection du matériel… <strong>Je peux vous apporter mon analyse et mon expertise, afin de vous décharger de la partie études de vos projets de plomberie, chauffage, ventilation et climatisation</strong>, au travers de l’ensemble des documents qui vous seront nécessaires de la préparation à l’achèvement.</p>
             </div>
         </section>
         <section id="services">
             <div class="content-services">
                 <h2>Les services</h2>
                 <h3><iconify-icon inline icon="line-md:upload-loop" rotate="90deg" flip="horizontal"></iconify-icon> Professionnels</h3>
-                <p>Je prends connaissance de la totalité des pièces que vous me fournissez qui délimitent votre projet. Ensuite, nous définissons ensemble vos besoins à partir de vos attentes et de vos objectifs. Pour finir, nous fixons la liste des documents attendus et je vous accompagne de la préparation du projet jusqu’au rendu final.</p>
+                <p>Je prends connaissance de la totalité des pièces que vous me fournissez qui délimitent votre projet. Ensuite, nous définissons ensemble <strong>vos besoins à partir de vos attentes et de vos objectifs</strong>. Pour finir, nous fixons la liste des documents attendus et je vous accompagne de la préparation du projet jusqu’au rendu final.</p>
 
                 <div class="services-cards">
                     <div class="card prepa" >
@@ -339,12 +339,12 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
             <div class="content-services">
                 <h3><iconify-icon inline icon="line-md:upload-loop" rotate="90deg" flip="horizontal"></iconify-icon> Particuliers</h3>
                 <blockquote>
-                    <p><iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous désirez concevoir ou rénover une salle de bains ou tout autre pièce d’eau, et vous souhaiteriez un accompagnement pour passer de l’idée à la réalité.<br>
-                    <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous voulez installer une ventilation chez vous, ou revoir votre système de chauffage, et vous aimeriez être aiguillé sur la façon de procéder.<br>
-                    <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous construisez, et vous avez besoin d’un regard extérieur sur vos plans fluides et les documents en votre possession avant la réalisation des travaux.</p>
+                    <p><iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous désirez concevoir ou rénover une salle de bains ou tout autre pièce d’eau, et <strong>vous souhaiteriez un accompagnement</strong> pour passer de l’idée à la réalité.<br>
+                    <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous voulez installer une ventilation chez vous, ou revoir votre système de chauffage, et <strong>vous aimeriez être aiguillé</strong> sur la façon de procéder.<br>
+                    <iconify-icon inline icon="material-symbols:check-small-rounded"></iconify-icon> Vous construisez, et <strong>vous avez besoin d’un regard extérieur</strong> sur vos plans fluides et les documents en votre possession avant la réalisation des travaux.</p>
                 </blockquote>
 
-                <p style="text-align:center; font-weight:600;">Quelque soit la nature de votre demande, voici le déroulé :</p>
+                <h4>Quelque soit la nature de votre demande, voici le déroulé :</h4>
                 
                 <div class="services-cards part">
                 <div class="col-lg-4">
@@ -355,7 +355,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
 // Un espace insécable &nbsp; à gauche et à droite de l'icône pour que le validateur ne considère pas le <h5> comme vide.
 ?>
                                 <h5 class="card-title">&nbsp;<iconify-icon icon="tabler:square-rounded-number-1"></iconify-icon>&nbsp;</h5>
-                                <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à votre entière écoute. C'est à ce moment que nous mettons en lumière vos attentes.</p>
+                                <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à <strong>votre entière écoute</strong>. C'est à ce moment que nous mettons en lumière <strong>vos attentes</strong>.</p>
                             </div>
                         </div>
                 </div>
@@ -364,7 +364,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                             <img class="card-img-top" src="images/servpart2.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">&nbsp;<iconify-icon icon="tabler:square-rounded-number-2"></iconify-icon>&nbsp;</h5>
-                                <p>Si le besoin est, nous convenons d'un rendez-vous sur site, pour appréhender davantage les volumes et les contraintes éventuelles à l'élaboration de votre projet, et de votre cahier des charges.</p>
+                                <p>Si le besoin est, nous convenons d'un rendez-vous sur site, pour appréhender davantage les volumes et les contraintes éventuelles à l'élaboration de <strong>votre projet</strong>, et de <strong>votre cahier des charges</strong>.</p>
                             </div>
                         </div>
                 </div>
@@ -373,7 +373,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                             <img class="card-img-top" src="images/servpart3.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title">&nbsp;<iconify-icon icon="tabler:square-rounded-number-3"></iconify-icon>&nbsp;</h5>
-                                <p>Enfin, nous établissons un plan d'action pour atteindre vos objectifs. Pendant l'accompagnement, vous êtes et restez le maître à bord, nous avançons à votre rythme et après validation de chacune des étapes que nous aurons défini ensemble, jusqu'à l'aboutissement de votre projet.</p>
+                                <p>Enfin, nous établissons un plan d'action pour atteindre <strong>vos objectifs</strong>. Pendant l'accompagnement, vous êtes et restez le maître à bord, <strong>nous avançons à votre rythme</strong> et après validation de chacune des étapes que nous aurons défini ensemble, <strong>jusqu'à l'aboutissement de votre projet.</strong></p>
                             </div>
                         </div>
                     </div>
@@ -390,11 +390,12 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
 <?php
 // </br> n'existe pas ^^ C'est <br> ou <br /> ;) 
 ?>
-                        <p>N’hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail<br>(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)</p>
+                        <p>N’hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail<br><?php //(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)
+                        ?></p>
                         <p class="text-uppercase">Calory : </p>
                         <p class="city ms-3">Belfort (90)</p>
-                        <p class="phone ms-3">Tél. : 07 69 15 42 96</p>
-                        <p class="mail ms-3">Mail : <?=encode_mail("projet@calory.fr")?></p>
+                        <p class="phone ms-3">07 69 15 42 96</p>
+                        <p class="mail ms-3"><?=encode_mail("projet@calory.fr")?></p>
                     </div>
                     <div class="col-lg-6 p-5">
                         <div id="formulaire" class="p-4">

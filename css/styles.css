@@ -270,6 +270,12 @@ section#services{
     border-left: 0.6em #004e65 solid;
 }
 
+.content-services h4 {
+    text-align:center;
+    font-weight:600;
+    margin-bottom: 40px;
+}
+
 .content-services p{
   font-weight:500;
   margin: 1em 0 3em;
@@ -317,6 +323,7 @@ blockquote {
 .particular p{
   font-weight: inherit;
   margin:1em 0 0;
+  text-align: justify;
 }
 
 .text-contact{
