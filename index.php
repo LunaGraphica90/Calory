@@ -243,7 +243,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
             <div class="container-fluid">
                 <a class="navbar-brand" href=""><img src="images/logoCalory.png" alt="Logo Calory" ></a>
                 <div class="contact mobile">
-                        <p class="phone">07 69 15 42 96</p>
+                        <p class="phone"><a href="tel:+33769154296">07 69 15 42 96</a></p>
                         <p class="mail"><?=encode_mail("projet@calory.fr")?></p>
                     </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -265,7 +265,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                         </li>
                     </ul>
                     <div class="contact desktop">
-                        <p class="phone">07 69 15 42 96</p>
+                        <p class="phone"><a href="tel:+33769154296">07 69 15 42 96</a></p>
                         <p class="mail"><?=encode_mail("projet@calory.fr")?></p>
                     </div>
                 </div>
@@ -399,7 +399,7 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                         ?></p>
                         <p class="text-uppercase">Calory : </p>
                         <p class="city ms-3">Belfort (90)</p>
-                        <p class="phone ms-3">07 69 15 42 96</p>
+                        <p class="phone ms-3"><a href="tel:+33769154296">07 69 15 42 96</a></p>
                         <p class="mail ms-3"><?=encode_mail("projet@calory.fr")?></p>
                     </div>
                     <div class="col-lg-6 p-5">

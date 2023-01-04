@@ -138,6 +138,11 @@ header .contact p{
   margin-right:1em;
 }
 
+.contact .phone a{
+  color:#FFFFFF !important;
+  text-decoration: none;
+}
+
 .contact .mail{
   width:fit-content;
   background: url("../images/mail.png")left center no-repeat;
