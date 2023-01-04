@@ -411,3 +411,10 @@ footer a{
 footer a:hover{
   text-decoration:underline;
 }
+
+
+
+/* CSS pour antispam */
+.col-0 {
+    display: none;
+}

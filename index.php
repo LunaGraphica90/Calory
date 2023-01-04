@@ -11,22 +11,29 @@ session_start();
 // Fonction d'encodage du mail pour affichage :
 function encode_mail($email) {
     $mail_encoded = "";
+    // Pour chaque caractère de la chaine...
     for($i = 0; $i < strlen($email); $i++) {
+        // On définit aléatoirement le mode d'affichage...
         switch((rand(1, 300) % 3)) {
             case 0:
+                // On affiche le caractère en cours en code ordinal
                 $mail_encoded .= "&#".ord($email[$i]).";";
                 break;
             case 1:
+                // On affiche le caractère en cours en code hexadécimal
                 $mail_encoded .= "&#x".bin2hex($email[$i]).";";
                 break;
             case 2:
+                // On affiche le caractère en cours normalement
                 $mail_encoded .= $email[$i];
                 break;
             default:
+                // On n'est pas censé arriver ici...
                 echo "Error";
                 break;
         }
     }
+    // On renvoie la chaine encodée.
     return $mail_encoded;
 }
 
@@ -48,6 +55,7 @@ $sujets = array(1 => "Réalisation de plans",
 
 if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
 
+    // On filtre le contenu des variables entrantes du $_POST...
     $prenom = filter_input(INPUT_POST, 'prenom', FILTER_SANITIZE_SPECIAL_CHARS);
     $nom = filter_input(INPUT_POST, 'nom', FILTER_SANITIZE_SPECIAL_CHARS);
     $email = filter_input(INPUT_POST, 'mail', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -61,15 +69,18 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
     $id_sujet = (int)filter_input(INPUT_POST, 'subject', FILTER_SANITIZE_SPECIAL_CHARS);
     ${$_SESSION["champ_antispam"]} = filter_input(INPUT_POST, $_SESSION["champ_antispam"], FILTER_SANITIZE_SPECIAL_CHARS);
 
-    // Filtre antispam
+    // Filtre antispam : On vérifie si le résultat du calcul est bon.
     if(${$_SESSION["champ_antispam"]} == $_SESSION["antispam"]) {
+        // On jarte les mails en .ru...
         if(substr($email, -3) != ".ru") {
-            // On envoie le mail
-            // Si nom, prenom, societe et email sont remplis ou non... Si oui, on kill.
+            // Si nom, prenom, societe et email sont remplis ou non... Si oui, on kill (2nd contrôle antispam)
             if($prenom == "" and $nom == "" and $email == "" and $societe == "") {
-                if($nom2 != "" and $email2 != "" and $message != "") {
+                // On vérifie que les champs requis sont bien renseignés...
+                if($nom2 != "" and $email2 != "" and $message != "" and $id_sujet != "") {
+                    // Objet du mail...
                     $objet = $prenom2." ".$nom2." a envoyé un email depuis le site " . $_SERVER["HTTP_HOST"];
                     
+                    // Contenu du mail...
                     $data = "Nom : ".$nom2." ".$prenom2."\n";
                     if($societe2 != "") {
                         $data .= "Société : ".$societe2."\n";
@@ -81,7 +92,7 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
                     $data .= "Objet : ".$sujets[$id_sujet]."\n";
                     $data .= "\n\nMessage :\n".$message."\n\n";
         
-                    // Traitement des special char de saut de ligne...
+                    // Traitement des special char de saut de ligne suite à l'encodage effectué par le filtrage des variables au début...
                     // \r\n
                     $data = str_replace("&#13;&#10;", "\n", $data);
                     // \n
@@ -89,21 +100,21 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
                     // \r
                     $data = str_replace("&#13;", "\n", $data);
         
-        
+                    // Si le mail part...        
                     if(mail("contact@e-concept-applications.fr", $objet, $data, "Content-type: text/plain; charset=utf-8\nFrom: ".$email2."")) {
+                        // On détruit le contenu du formulaire dans la session...
                         if(isset($_SESSION["formulaire"])) {
                             unset($_SESSION["formulaire"]);
                         }
+                        // Et on remet le message de confirmation.
                         $_SESSION["formulaire"]["remarque"] = "Votre message a bien été envoyé.";
                     } else {
-                        if(isset($_SESSION["formulaire"])) {
-                            unset($_SESSION["formulaire"]);
-                        }
-                        $_SESSION["formulaire"]["remarque"] = "Votre message n'a pas été envoyé.";
+                        // Sinon, on garde le formulaire, avec un message d'erreur.
+                        unset($_SESSION["formulaire"]["remarque"]);
+                        $_SESSION["formulaire"]["erreur"] = "Votre message n'a PAS été envoyé.";
                     }
-        
-                    //header("Location: /#contact");
                 } else {
+                    // S'il manque des variables, on recharge le formulaire et on affiche un message...
                     $_SESSION["formulaire"]["nom"] = $nom2;
                     $_SESSION["formulaire"]["prenom"] = $prenom2;
                     $_SESSION["formulaire"]["email"] = $email2;
@@ -111,20 +122,23 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
                     $_SESSION["formulaire"]["societe"] = $societe2;
                     $_SESSION["formulaire"]["sujet"] = $id_sujet;
                     $_SESSION["formulaire"]["message"] = stripslashes($message);
-                    $_SESSION["formulaire"]["remarque"] = "Merci de remplir au moins votre nom, votre mail et un message.<br>";
-                    //header("Location: /#contact");
+                    unset($_SESSION["formulaire"]["remarque"]);
+                    $_SESSION["formulaire"]["erreur"] = "Merci de remplir au moins votre nom, votre mail, un sujet et un message.";
                 }
             } else {
+                // Spam, on kill direct.
                 header("HTTP/1.1 500 Internal Server Error");
                 exit("<h1>500 Internal Server Error</h1>");
             }
         } else {
+            // Spam, on kill direct.
             header("HTTP/1.1 500 Internal Server Error");
             exit("<h1>500 Internal Server Error</h1>");
         }
     
         //
     } else {
+        // Calcul antispam incorrect, on remet le formulaire avec un message.
         $_SESSION["formulaire"]["nom"] = $nom2;
         $_SESSION["formulaire"]["prenom"] = $prenom2;
         $_SESSION["formulaire"]["email"] = $email2;
@@ -132,8 +146,8 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
         $_SESSION["formulaire"]["societe"] = $societe2;
         $_SESSION["formulaire"]["sujet"] = $id_sujet;
         $_SESSION["formulaire"]["message"] = stripslashes($message);
-        $_SESSION["formulaire"]["remarque"] = "Contrôle anti-spam incorrect !<br>Merci d'inscrire le résultat du calcul en chiffres.";
-        //header("Location: /#contact");
+        unset($_SESSION["formulaire"]["remarque"]);
+        $_SESSION["formulaire"]["erreur"] = "Contrôle anti-spam incorrect !<br>Merci d'inscrire le résultat du calcul en chiffres.";
     }
 } else {
     unset($_SESSION);
@@ -141,6 +155,9 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
 
 
 
+/***********************************/
+/* Génération du contrôle antispam */
+/***********************************/
 
 // On génère un tableau de correspondance nombres numériques/nombres texte
 $numbers = array(1=>"un", 2=>"deux", 3=>"trois", 4=>"quatre", 5=>"cinq", 6=>"six",
@@ -148,13 +165,16 @@ $numbers = array(1=>"un", 2=>"deux", 3=>"trois", 4=>"quatre", 5=>"cinq", 6=>"six
     13=>"treize", 14=>"quatorze", 15=>"quinze");
 $operators = array("+"=>"plus", "-"=>"moins");
 
+// On génère des nombres aléatoires...
 srand((double)microtime()*1000000);
 $number1 = rand(1, 15);
 $number2 = rand(1, 15);
+// Et un opérateur aléatoire.
 $operator = rand(1, 2);
 if($operator == 1) {
     $operator = "+";
 } else {
+    // Si soustraction, on met le plus grand nombre en premier.
     $operator = "-";
     if($number1 < $number2) {
         $tmp = $number2;
@@ -162,7 +182,9 @@ if($operator == 1) {
         $number1 = $tmp;
     }
 }
+// On mémorise l'opération en numérique.
 $operation = $number1." ".$operator." ".$number2;
+// Pour chaque opérande et opérateur, on choisit en aléatoire si on l'affiche en numérique ou en toutes lettres
 if(rand(1,2) == 1) {
     $operation_libelle = $number1;
 } else {
@@ -178,7 +200,10 @@ if(rand(1,2) == 1) {
 } else {
     $operation_libelle .= $numbers[$number2];
 }
+
+// On effectue le calcul pour enregistrer le résultat...
 eval("\$_SESSION[\"antispam\"] = ".$operation.";");
+// On définit le nom du champ antispam...
 $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
 
 
@@ -258,6 +283,9 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                 </div>
                 <div class="cadre two"></div>
                 <div class="mask-image col-lg-8 col-md-12">
+<?php
+// Avec un alt, c'est mieux... ^^
+?>
                     <img alt="Accueil Calory" class="home-image img-fluid" src="images/ImageAccueil2_NB.jpg">
                 </div>
             </div>
@@ -323,6 +351,9 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                     <div class="card particular">
                             <img class="card-img-top" src="images/servpart1.jpg" alt="Card image cap">
                             <div class="card-body">
+<?php
+// Un espace insécable &nbsp; à gauche et à droite de l'icône pour que le validateur ne considère pas le <h5> comme vide.
+?>
                                 <h5 class="card-title">&nbsp;<iconify-icon icon="tabler:square-rounded-number-1"></iconify-icon>&nbsp;</h5>
                                 <p>Après avoir pris contact avec moi, nous fixons un premier rendez-vous en distanciel, durant lequel je suis à votre entière écoute. C'est à ce moment que nous mettons en lumière vos attentes.</p>
                             </div>
@@ -356,6 +387,9 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                     <div class="col-lg-6 text-contact">
                         <h2>Contact</h2>
                         <p class="bolder">Vous voulez des précisions sur les prestations ? Vous souhaitez discuter de votre projet ?</p>
+<?php
+// </br> n'existe pas ^^ C'est <br> ou <br /> ;) 
+?>
                         <p>N’hésitez pas à prendre contact en remplissant le formulaire ci-contre, par téléphone ou par mail<br>(disponible du lundi au jeudi de 09h à 12h et de 14h à 18h)</p>
                         <p class="text-uppercase">Calory : </p>
                         <p class="city ms-3">Belfort (90)</p>
@@ -366,13 +400,46 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                         <div id="formulaire" class="p-4">
                             <form class="row" method="post" action="/#contact">
 <?php
+// Si on a une remarque à afficher, on ajoute une div en conséquence...
 if(isset($_SESSION["formulaire"]["remarque"])) {
 ?>
-                                <div class="col-12 mt-3">
-                                    <label class="form-label"><?=$_SESSION["formulaire"]["remarque"]?><br><br></label>
-                         </div>
+                                <div class="col-12 mt-3 alert alert-success">
+                                    <?=$_SESSION["formulaire"]["remarque"]?>
+                                </div>
+<?php
+}
+
+// Si on a une erreur à afficher, on ajoute une div en conséquence...
+if(isset($_SESSION["formulaire"]["erreur"])) {
+?>
+                                <div class="col-12 mt-3 alert alert-danger">
+                                    <?=$_SESSION["formulaire"]["erreur"]?>
+                                </div>
 <?php                                                                
-}                                
+} 
+
+// Le code HTML qui suit est masqué (par la classe col-0) et sert au contrôle antispam (les cases DOIVENT rester vides)
+?>
+                                <div class="col-0">
+                                    <label for="nom" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="nom" name="nom" value="" placeholder="Antispam - Ne pas remplir cette case">
+                                </div>
+                                <div class="col-0">
+                                    <label for="prenom" class="form-label">Prénom</label>
+                                    <input type="text" class="form-control" id="prenom" name="prenom" value="" placeholder="Antispam - Ne pas remplir cette case">
+                                </div>
+                                <div class="col-0">
+                                    <label for="societe" class="form-label">Société</label>
+                                    <input type="text" class="form-control" id="societe" name="societe" value="" placeholder="Antispam - Ne pas remplir cette case">
+                                </div>
+                                <div class="col-0">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" value="" placeholder="Antispam - Ne pas remplir cette case">
+                                </div>
+<?php
+// On reprend le code normal.
+
+// !!! Les attributs for doivent correspondre aux id, pas aux name ! ;) 
 ?>
                                 <div class="col-6">
                                     <label for="inputlastname" class="form-label">Nom</label>
@@ -388,7 +455,10 @@ if(isset($_SESSION["formulaire"]["remarque"])) {
                                 </div>
                                 <div class="col-6 mt-3">
                                     <label for="inputphone" class="form-label">Téléphone</label>
-                                    <input type="text" class="form-control" id="inputphone" name="phone" value="<?php if(isset($_SESSION["formulaire"]["nom"])) echo $_SESSION["formulaire"]["tel"];?>">
+<?php
+// type="tel" ==> Clavier adapté sur smartphone ;) 
+?>
+                                    <input type="tel" class="form-control" id="inputphone" name="phone" value="<?php if(isset($_SESSION["formulaire"]["nom"])) echo $_SESSION["formulaire"]["tel"];?>">
                                 </div>
                                 <div class="col-6 mt-3">
                                     <label for="inputemail" class="form-label">Email</label>
@@ -397,14 +467,19 @@ if(isset($_SESSION["formulaire"]["remarque"])) {
                                 <div class="col-12 mt-3">
                                     <label for="subject" class="form-label">Sujet</label>
                                     <select class="form-select" aria-label="Default select example" id="subject" name="subject" required>
+<?php
+// On sélectionne la première option si on n'a pas de sujet déjà sélectionné...
+// On met également l'option à disabled pour que la saisie soit invalide avec le required, et on met un value à "" pour que le validateur W3C soit content.
+?>
                                         <option value="" disabled<?php if(!isset($_SESSION["formulaire"]["sujet"])) echo " selected"; ?>>Choisir</option>
-                                        <?php
-                                        foreach($sujets as $id_sujet => $sujet) {
-                                        ?>
+<?php
+// On boucle sur la liste des sujets, et on sélectionne le bon au passage si on a un formulaire déjà rempli...
+foreach($sujets as $id_sujet => $sujet) {
+?>
                                         <option value="<?=$id_sujet?>"<?php if(isset($_SESSION["formulaire"]["sujet"]) and $_SESSION["formulaire"]["sujet"] == $id_sujet) echo " selected"; ?>><?=$sujet?></option>
-                                        <?php
-                                        }
-                                        ?>
+<?php
+}
+?>
                                     </select>
                                 </div>
                                 <div class="col-12 mt-3">
@@ -413,7 +488,7 @@ if(isset($_SESSION["formulaire"]["remarque"])) {
                                 </div>
                                 <div class="col-12 mt-3">
                                      <label for="antispam" class="form-label">Contrôle antispam :<br>
-                                     Combien font <?=$operation_libelle?> ?</label>
+                                     Combien font <?=$operation_libelle?>&nbsp;?</label>
                                      <input type="number" class="form-control" name="<?=$_SESSION["champ_antispam"]?>" id="antispam" required>
                                 </div>
                                 <div class="col-12 mt-3">
@@ -431,7 +506,10 @@ if(isset($_SESSION["formulaire"]["remarque"])) {
     <footer>
         <div class="content-footer">
             <div class="corner footer"></div>
-            <p>Copyright©<?= date('Y') ?> Calory - Tous droits réservés</p>
+<?php
+// Pensons au futur... :) 
+?>
+            <p>Copyright&copy;<?php if(date('Y') == "2023") echo date('Y'); else echo "2023-".date('Y'); ?> Calory - Tous droits réservés</p>
             <ul>
                 <li><a href="" >Mentions légales</a></li>
                 <li><a href="https://luna-graphica.fr/" target="_blank">Design/intégration : Luna Graphica</a></li>
@@ -440,6 +518,10 @@ if(isset($_SESSION["formulaire"]["remarque"])) {
         </div>
     </footer>
     
+
+<?php
+// Plus d'attribut "type" sur les balises <script>
+?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <script src="js/activeLink.js"></script>
     <script src="js/stopfixNavigation.js"></script>
