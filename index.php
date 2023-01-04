@@ -8,6 +8,11 @@
 
 session_start();
 
+
+// Mail destination formulaire
+$mail_destinataire = "contact@e-concept-applications.fr";
+
+
 // Fonction d'encodage du mail pour affichage :
 function encode_mail($email) {
     $mail_encoded = "";
@@ -101,7 +106,7 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
                     $data = str_replace("&#13;", "\n", $data);
         
                     // Si le mail part...        
-                    if(mail("contact@e-concept-applications.fr", $objet, $data, "Content-type: text/plain; charset=utf-8\nFrom: ".$email2."")) {
+                    if(mail($mail_destinataire, $objet, $data, "Content-type: text/plain; charset=utf-8\nFrom: ".$email2."")) {
                         // On détruit le contenu du formulaire dans la session...
                         if(isset($_SESSION["formulaire"])) {
                             unset($_SESSION["formulaire"]);
