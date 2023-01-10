@@ -261,6 +261,7 @@ section#about p{
   padding: 3em;
   margin-left: 10em;
   align-self: end;
+  text-align: justify;
 }
 
 section#services{
@@ -273,6 +274,7 @@ section#services{
     margin: 3em 6em;
     padding: 0 3em 3em;
     border-left: 0.6em #004e65 solid;
+    text-align: justify;
 }
 
 .content-services h4 {
@@ -438,8 +440,8 @@ footer a:hover{
 
 /* CSS Tarte au cirton (coockies) */
 .tarteaucitronIconBottomRight {
-    bottom: 40px!important;
-    right: 50px!important;
+    bottom: 10px!important;
+    /* right: 50px!important; */
 }
 
 

@@ -203,9 +203,17 @@
     .services-cards.part{
         background-size:0.23em;
     }
+
+    .form-contact {
+        padding: 1em 1em;
+    }
 }
 
 @media screen and (max-width: 879px){
+    h2 {
+        font-size: 3em !important;
+    }
+
     .content-about {
         width: 80%;
         margin:0 auto
@@ -218,7 +226,7 @@
 
     .content-services {
         margin: 1em 1em;
-        padding-bottom:0;
+        padding:0 1.2em;
     }
 
     .card-img-top{
@@ -288,6 +296,10 @@
     .contact.mobile{
         display: none;
     }
+
+    blockquote {
+        margin-left: 1em !important;
+      }
 }
 
 @media screen and (max-width: 405px){
@@ -305,5 +317,9 @@
     .pictos {
         transform: none;
         margin: 0 0.5em;
+    }
+
+    .card-body{
+        padding:1em 0 !important;
     }
 }
