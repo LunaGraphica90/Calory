@@ -434,3 +434,12 @@ footer a:hover{
   text-transform: none;
   font-style:italic;
 }
+
+
+/* CSS Tarte au cirton (coockies) */
+.tarteaucitronIconBottomRight {
+    bottom: 40px!important;
+    right: 50px!important;
+}
+
+
