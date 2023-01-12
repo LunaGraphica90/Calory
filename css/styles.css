@@ -438,7 +438,25 @@ footer a:hover{
 }
 
 
-/* CSS Tarte au cirton (coockies) */
+
+
+
+/* Mentions légales */
+
+section.mentionslegales {
+    margin-top: 100px;
+}
+
+section.mentionslegales a {
+    color: #FFFFFF;
+}
+
+
+section.mentionslegales #cookiesml {
+    width: 30px;
+}
+
+/* CSS Tarte au cirton (cookies) */
 .tarteaucitronIconBottomRight {
     bottom: 10px!important;
     /* right: 50px!important; */
