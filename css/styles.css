@@ -135,7 +135,7 @@ header .contact p{
   width:fit-content;
   background: url("../images/phone.png")left center no-repeat;
   padding-left: 2em;
-  margin-right:1em;
+  /*margin-right:1em;*/
 }
 
 .contact .phone a{
@@ -427,7 +427,7 @@ footer a:hover{
 
 
 
-/* CSS pour antispam et mentions légales du formulaire */
+/* CSS pour antispam et mentions lÃ©gales du formulaire */
 .col-0 {
     display: none;
 }
@@ -445,7 +445,7 @@ footer a:hover{
 
 
 
-/* Mentions légales */
+/* Mentions lÃ©gales */
 
 section.mentionslegales {
     margin-top: 100px;
