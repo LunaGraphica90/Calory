@@ -427,7 +427,7 @@ footer a:hover{
 
 
 
-/* CSS pour antispam */
+/* CSS pour antispam et mentions légales du formulaire */
 .col-0 {
     display: none;
 }
@@ -437,7 +437,11 @@ footer a:hover{
   font-style:italic;
 }
 
-
+#contact-ml {
+    margin-top: 10px;
+    font-size: 0.6em;
+    text-align: justify;
+}
 
 
 

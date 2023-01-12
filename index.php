@@ -413,6 +413,9 @@ $_SESSION["champ_antispam"] = "antispam".((int)microtime()*1000000);
                                 <div class="col-12 mt-3">
                                     <button name="action" value="envoi-mail" type="submit" class="btn btn-calory">Envoyer</button>
                                 </div>
+                                <div id="contact-ml">
+                                Calory s'engage à ce que la collecte et le traitement de vos données, effectués à partir de notre site <?=$_SERVER["HTTP_HOST"]?>, soient conformes au règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés. Pour connaître et exercer vos droits, notamment de retrait de votre consentement à l'utilisation des données collectées par ce formulaire, veuillez consulter notre <a href="mentions-legales.html#confidentialite">politique de confidentialité</a>.
+                                </div>
                             </form>
                         </div>
                     </div>

@@ -28,7 +28,7 @@
     
     <script src="/tarteaucitron/tarteaucitron.js"></script>
 
-    <script type="text/javascript">
+    <script>
     tarteaucitron.init({
 	  "privacyUrl": "", /* Privacy policy url */
       "bodyPosition": "bottom", /* or top to bring it as first element for accessibility */
