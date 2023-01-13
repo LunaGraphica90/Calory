@@ -9,7 +9,7 @@
 session_start();
 
 // Mail destination formulaire
-$mail_destinataire = "contact@e-concept-applications.fr";
+$mail_destinataire = "projet@calory.fr";
 
 
 // On inclut le fichier de fonctions et le header
@@ -55,30 +55,30 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
                 // On vérifie que les champs requis sont bien renseignés...
                 if($nom2 != "" and $email2 != "" and $message != "" and $id_sujet != "") {
                     // Objet du mail...
-                    $objet = $prenom2." ".$nom2." a envoyé un email depuis le site " . $_SERVER["HTTP_HOST"];
+                    $objet = "=?UTF-8?B?" . base64_encode($prenom2 . " " . $nom2 . " a envoyé un email depuis le site " . $_SERVER["HTTP_HOST"]) . "?=";
                     
                     // Contenu du mail...
-                    $data = "Nom : ".$nom2." ".$prenom2."\n";
+                    $data = "<strong>Nom : </strong>" . $nom2 . " " . $prenom2 . "<br>";
                     if($societe2 != "") {
-                        $data .= "Société : ".$societe2."\n";
+                        $data .= "<strong>Société : </strong>" . $societe2 . "<br>";
                     }
-                    $data .= "Adresse email : ".$email2."\n";
+                    $data .= "<strong>Adresse email : </strong><a href=\"mailto:" . $email2 . "\">" . $email2 . "</a><br>";
                     if($tel != "") {
-                        $data .= "Téléphone : ".$tel."\n";
+                        $data .= "<strong>Téléphone : </strong><a href=\"tel:" . $tel . "\">" . $tel . "<br>";
                     }
-                    $data .= "Objet : ".$sujets[$id_sujet]."\n";
-                    $data .= "\n\nMessage :\n".$message."\n\n";
+                    $data .= "<strong>Objet : ".$sujets[$id_sujet]."</strong><br>";
+                    $data .= "<br><strong>Message :</strong><br>".$message."<br><br>";
         
-                    // Traitement des special char de saut de ligne suite à l'encodage effectué par le filtrage des variables au début...
+                    // Traitement des special char suite à l'encodage effectué par le filtrage des variables au début...
                     // \r\n
-                    $data = str_replace("&#13;&#10;", "\n", $data);
+                    $data = str_replace("&#13;&#10;", "<br>", $data);
                     // \n
-                    $data = str_replace("&#10;", "\n", $data);
+                    $data = str_replace("&#10;", "<br>", $data);
                     // \r
-                    $data = str_replace("&#13;", "\n", $data);
+                    $data = str_replace("&#13;", "<br>", $data);
         
                     // Si le mail part...        
-                    if(mail($mail_destinataire, $objet, $data, "Content-type: text/plain; charset=utf-8\nFrom: ".$email2."")) {
+                    if(mail($mail_destinataire, $objet, $data, "Content-Type: text/html; charset=utf-8\nReply-To: " . $nom2 . " " . $prenom2 . " <" . $email2 . ">\nFrom: Site " . $_SERVER["HTTP_HOST"] . " <" . $mail_destinataire . ">\nX-Mailer: PHP/" . phpversion())) {
                         // On détruit le contenu du formulaire dans la session...
                         if(isset($_SESSION["formulaire"])) {
                             unset($_SESSION["formulaire"]);
@@ -127,7 +127,7 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
         $_SESSION["formulaire"]["erreur"] = "Contrôle anti-spam incorrect !<br>Merci d'inscrire le résultat du calcul en chiffres.";
     }
 } else {
-    unset($_SESSION);
+    unset($_SESSION["formulaire"]);
 }
 
 

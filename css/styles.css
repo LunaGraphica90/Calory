@@ -250,6 +250,12 @@ section#about{
   display: flex;
 }
 
+/* alternative pour mentions légales */
+section#about.mentionslegales {
+  background: url("../images/ImageAbout.jpg")center fixed no-repeat;
+  background-size: cover;
+}
+
 section#about p{
   text-align: justify;
 }
