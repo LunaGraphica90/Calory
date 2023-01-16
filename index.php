@@ -64,7 +64,7 @@ if(isset($_POST["action"]) and $_POST["action"] == "envoi-mail") {
                     }
                     $data .= "<strong>Adresse email : </strong><a href=\"mailto:" . $email2 . "\">" . $email2 . "</a><br>";
                     if($tel != "") {
-                        $data .= "<strong>Téléphone : </strong><a href=\"tel:" . $tel . "\">" . $tel . "<br>";
+                        $data .= "<strong>Téléphone : </strong><a href=\"tel:" . $tel . "\">" . $tel . "</a><br>";
                     }
                     $data .= "<strong>Objet : ".$sujets[$id_sujet]."</strong><br>";
                     $data .= "<br><strong>Message :</strong><br>".$message."<br><br>";
