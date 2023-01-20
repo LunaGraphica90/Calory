@@ -63,6 +63,10 @@
         width: 45%;
     }
 
+    .mentionslegales .content-about {
+      width: 80%;
+    }
+    
     .content-services {
         margin: 3em 4em;
     }
@@ -96,6 +100,10 @@
 @media screen and (max-width:1162px){
     .content-about {
         width: 55%;
+    }
+    
+    .mentionslegales .content-about {
+      width: 80%;
     }
     
     .card{

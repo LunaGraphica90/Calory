@@ -10,8 +10,9 @@ RewriteEngine on
 ##RewriteRule ^(.*) https://calory.fr/$1 [QSA,L,R=301]
 
 #Sitemap
-##RewriteRule sitemap.xml sitemap.php
-##RewriteRule sitemap sitemap.php
+RewriteRule sitemap.xml sitemap.php
+RewriteRule sitemap sitemap.php
 
 RewriteRule ^mentions-legales.html$ mentions-legales.php [L]
+RewriteRule ^cgv.html$ cgv.php [L]
 

@@ -7,6 +7,7 @@
             <p>Copyright&copy;<?php if(date('Y') == "2023") echo date('Y'); else echo "2023-".date('Y'); ?> Calory - Tous droits réservés</p>
             <ul>
                 <li><a href="mentions-legales.html" >Mentions légales</a></li>
+                <li><a href="cgv.html" >CGV</a></li>
                 <li><a href="https://luna-graphica.fr/" target="_blank">Design/intégration : Luna Graphica</a></li>
                 <li><a href="https://e-concept-applications.fr/" target="_blank">Technique/Hébergement : E-Concept Applications</a></li>
             </ul>

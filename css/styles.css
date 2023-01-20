@@ -270,6 +270,15 @@ section#about p{
   text-align: justify;
 }
 
+.mentionslegales .content-about {
+  width: 80%;
+}
+
+.mentionslegales .content-about em {
+  font-style: italic;
+  color: #CCCCCC;
+}
+
 section#services{
   background: url("../images/lines.png")left bottom no-repeat;
   background-size: contain;
